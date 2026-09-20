@@ -245,12 +245,12 @@ def download(url: str, platform: str, workdir: Path) -> tuple[Path, float]:
         "restrictfilenames": True,
         "remote_components": {"ejs:github"},
         "extractor_args": {
-            "youtubepot-bgutilscript": {
-                "server_home": "/opt/bgutil-ytdlp-pot-provider/server"
-    },
-    "youtube": {
-        "player_client": ["mweb"]
-    },
+            "youtubepot-bgutilhttp": {
+                "base_url": "http://127.0.0.1:4416"
+            },
+            "youtube": {
+                "player_client": ["mweb"]
+            },
 },
         
          

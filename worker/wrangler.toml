@@ -1,0 +1,30 @@
+name = "vidox-worker"
+main = "src/index.ts"
+compatibility_date = "2026-09-20"
+
+[vars]
+ENVIRONMENT = "production"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "vidox-db"
+database_id = "7bc3bda1-f54b-4a92-a7d4-18f0c5c4545c"
+
+[[queues.producers]]
+queue = "vidox-jobs"
+binding = "JOBS"
+
+[[queues.consumers]]
+queue = "vidox-jobs"
+max_batch_size = 1
+max_batch_timeout = 0
+max_concurrency = 2
+max_retries = 3
+retry_delay = 60
+dead_letter_queue = "vidox-jobs-dlq"
+
+[triggers]
+crons = ["* * * * *"]
+
+[observability]
+enabled = true

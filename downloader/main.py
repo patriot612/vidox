@@ -19,6 +19,9 @@ logging.basicConfig(level=logging.INFO)
 log = logging.getLogger("vidox")
 app = FastAPI(title="VidoX Downloader", docs_url=None, redoc_url=None, openapi_url=None)
 
+log.info("BGUTIL SERVER EXISTS: %s", Path("/opt/bgutil-ytdlp-pot-provider/server").exists())
+log.info("BGUTIL BUILD EXISTS: %s", Path("/opt/bgutil-ytdlp-pot-provider/server/build").exists())
+
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 INTERNAL_SECRET = os.environ["INTERNAL_SECRET"]
 WORKER_CALLBACK_URL = os.environ["WORKER_CALLBACK_URL"]

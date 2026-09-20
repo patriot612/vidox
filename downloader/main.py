@@ -250,7 +250,7 @@ def download(url: str, platform: str, workdir: Path) -> tuple[Path, float]:
                 "base_url": "http://127.0.0.1:4416"
             },
             "youtube": {
-                "player_client": ["web_embedded"]
+                "player_client": ["android_vr"]
             },
 },
         

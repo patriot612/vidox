@@ -241,6 +241,16 @@ def download(url: str, platform: str, workdir: Path) -> tuple[Path, float]:
         "fragment_retries": 3,
         "restrictfilenames": True,
         "remote_components": {"ejs:github"},
+        "extractor_args": {
+    "youtubepot-bgutilscript": {
+        "script_path": "/opt/bgutil-ytdlp-pot-provider/server/build/generate_once.js"
+    },
+    "youtube": {
+        "player_client": ["mweb"]
+    },
+},
+        
+         
     }
 
     inspect_opts = {**common, "skip_download": True}

@@ -240,6 +240,7 @@ def download(url: str, platform: str, workdir: Path) -> tuple[Path, float]:
         "retries": 3,
         "fragment_retries": 3,
         "restrictfilenames": True,
+        "remote_components": {"ejs:github"},
     }
 
     inspect_opts = {**common, "skip_download": True}

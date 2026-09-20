@@ -245,15 +245,8 @@ def download(url: str, platform: str, workdir: Path) -> tuple[Path, float]:
         "fragment_retries": 3,
         "restrictfilenames": True,
         "remote_components": {"ejs:github"},
-        "extractor_args": {
-            "youtubepot-bgutilhttp": {
-                "base_url": "http://127.0.0.1:4416"
-            }
-            
-},
+}
         
-         
-    }
 
     inspect_opts = {**common, "skip_download": True}
     with yt_dlp.YoutubeDL(inspect_opts) as ydl:

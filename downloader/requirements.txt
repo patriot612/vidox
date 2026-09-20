@@ -3,3 +3,4 @@ uvicorn[standard]==0.35.0
 yt-dlp[default]==2026.8.19
 requests==2.32.5
 python-multipart==0.0.20
+bgutil-ytdlp-pot-provider

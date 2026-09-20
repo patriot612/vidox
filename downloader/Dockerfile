@@ -15,7 +15,9 @@ RUN git clone --depth 1 \
     https://github.com/Brainicism/bgutil-ytdlp-pot-provider.git \
     /opt/bgutil-ytdlp-pot-provider \
     && cd /opt/bgutil-ytdlp-pot-provider/server \
-    && deno install --allow-scripts=npm:canvas --frozen
+    && deno install --allow-scripts=npm:canvas --frozen \
+    && deno run --allow-all npm:typescript@latest --build
+
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
